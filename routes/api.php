@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\CategoryController;
+use App\Http\Controllers\api\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/category/{categoryId}', [CategoryController::class, 'detail']);
+
+Route::get('/movies', [MovieController::class, 'index']);
+Route::get('/movies/{movieId}', [MovieController::class, 'detail']);
